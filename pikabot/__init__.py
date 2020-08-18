@@ -6,7 +6,7 @@ from requests import get
 os.system("pip install --upgrade pip")
 bot1 = None
 if Var.STRING_SESSION:
-    bot = TelegramClient(StringSession(STRING_SESSION),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+    bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
     bot1 = TelegramClient(StringSession(Var.STRING_SESSION2),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
      quit(1)
