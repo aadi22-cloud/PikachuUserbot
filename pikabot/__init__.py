@@ -4,15 +4,15 @@ from pySmartDL import SmartDL
 from requests import get
 
 os.system("pip install --upgrade pip")
-
+bot1 = tgbot = None
 if Var.STRING_SESSION:
     bot = TelegramClient(StringSession(STRING_SESSION),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
      quit(1)
 if Var.STRING_SESSION2:
     bot1 = TelegramClient(StringSession(Var.STRING_SESSION2),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
-
-
+if Var.TG_BOT_TOKEN_BF_HER:    
+    tgbot = TelegramClient("TG_BOT_TOKEN", Var.API_KEY, Var.API_HASH).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
 
 
 CMD_LIST = {}
