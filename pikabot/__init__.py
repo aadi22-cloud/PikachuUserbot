@@ -15,10 +15,10 @@ else:
 
 if Var.STRING_SESSION2:
     session_name = str(Var.STRING_SESSION2)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    Bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup2"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+    Bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
 
 CMD_LIST = {}
