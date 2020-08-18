@@ -4,7 +4,7 @@ from pySmartDL import SmartDL
 from requests import get
 
 os.system("pip install --upgrade pip")
-bot1 = tgbot = None
+bot1 = None
 if Var.STRING_SESSION:
     bot = TelegramClient(StringSession(STRING_SESSION),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
