@@ -4,17 +4,14 @@ from pySmartDL import SmartDL
 from requests import get
 
 os.system("pip install --upgrade pip")
+
 if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    bot = TelegramClient(StringSession(STRING_SESSION),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
      quit(1)
-
 if Var.STRING_SESSION2:
-    session_name2 = str(Var.STRING_SESSION)
-    bot1 = TelegramClient(StringSession(session_name2), Var.APP_ID, Var.API_HASH)
+    bot1 = TelegramClient(StringSession(Var.STRING_SESSION2),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 
-     
 
 
 
