@@ -22,6 +22,19 @@ else:
     else:
         bot.start()
 
+async def a():
+  print("connecting")
+  x1 = x2 = ""
+  try:
+     await bot.start() ; print("client connected") ; x1 = "bot"
+  except:
+     Logs.info("Telegram String Session Wrong or Expired Please Add new one ") ; quit(1)
+  if bot1:
+      try:
+        await bot1.start() ; LOGS.info("connected") ; x2 = ", bot1"
+      except:
+         LOGS.info("Session string Wrong/Expired Please add new string session ") ; quit(1)
+
 print("Loading Main Plugs..")
 async def stop():
     cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
