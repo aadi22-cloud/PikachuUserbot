@@ -11,8 +11,7 @@ else:
      quit(1)
 if Var.STRING_SESSION2:
     bot1 = TelegramClient(StringSession(Var.STRING_SESSION2),Var.API_KEY,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
-if Var.TG_BOT_TOKEN_BF_HER:    
-    tgbot = TelegramClient("TG_BOT_TOKEN", Var.API_KEY, Var.API_HASH).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
+
 
 
 CMD_LIST = {}
