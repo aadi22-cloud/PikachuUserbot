@@ -49,6 +49,6 @@ if len(argv) not in (1, 3, 4):
     botx.disconnecf()
 else:
     bot.run_until_disconnected()
-    botx.run_untill_disconnected ()
+    botx.run_untill_disconnected()
 
 
