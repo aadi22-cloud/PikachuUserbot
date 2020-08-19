@@ -28,9 +28,6 @@ LOAD_PLUG = {}
 
 ENV = os.environ.get("ENV", False)
 
-basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
-                    level=INFO)
-LOGS = getLogger(__name__)
 
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
