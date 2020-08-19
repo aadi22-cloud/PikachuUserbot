@@ -17,31 +17,21 @@ else:
     else:
         bot.start()
 
-
-async def add_botx(bot_token):
-    await botx.start(bot_token)
-    bot.me = await botx.get_me() 
-    bot.uid = telethon.utils.get_peer_id(botx.me)
-if len(argv) not in (1, 3, 4):
-    botx.disconnect()
-else:
-    bot.tgbot = None
-    if Var.TG_BOT_USER_NAME_BF_HER2 is not None:
-        print("Inline Bot initializing")
-        botx.tgbot = TelegramClient("TG_BOT_TOKEN",api_id=Var.APP_ID,api_hash=Var.API_HASH).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
-        print("Initialisation finished with no errors")
-        print("Starting Pikabot")
-        botx.loop.run_until_complete(add_botx(Var.TG_BOT_USER_NAME_BF_HER))
-        print("Startup Completed")
-    else:
-        botx.start()
-
-print("Loading Main Plugs..")
-async def stop():
-    cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
-    for ixo in total_doxx:
-        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
-ItzSjDude.loop.run_until_complete(stop()) 
+async def a():
+  LOGS.info("Connecting...") ; 
+  x = x2 = ""
+  try:
+     await bot.start() ; LOGS.info("client connected") ; x = "Client1"
+  except:
+    LOGS.info("Telegram String Session Wrong or Expired Please Add new one ") ; quit(1)
+  if client2:
+      try:
+        await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
+      except:
+         LOGS.info("client2 Session string Wrong/Expired Please add new string session") ; quit(1)
+  cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
+  for ixo in total_doxx:
+       mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
 print("Loaded Sucessfully") 
 
 
@@ -60,4 +50,5 @@ else:
     bot.run_until_disconnected()
 
 
+ItzSjDude.loop.run_until_complete(a())
 
