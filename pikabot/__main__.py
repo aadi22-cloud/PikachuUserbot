@@ -24,11 +24,12 @@ async def a():
      await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
   except:
     LOGS.info("client2 Session string Wrong/Expired Please add new string session") ; quit(1)
+async def start():
   cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
-print("Loaded Sucessfully") 
-
+       print("Loaded Sucessfully") 
+ItzSjDude.loop.run_until_complete(start())
 
 print("Initialising Core")
 
