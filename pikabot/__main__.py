@@ -21,14 +21,9 @@ async def a():
   LOGS.info("Connecting...") ; 
   x = x2 = ""
   try:
-     await bot.start() ; LOGS.info("client connected") ; x = "Client1"
+     await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
   except:
-    LOGS.info("Telegram String Session Wrong or Expired Please Add new one ") ; quit(1)
-  if client2:
-      try:
-        await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
-      except:
-         LOGS.info("client2 Session string Wrong/Expired Please add new string session") ; quit(1)
+    LOGS.info("client2 Session string Wrong/Expired Please add new string session") ; quit(1)
   cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
