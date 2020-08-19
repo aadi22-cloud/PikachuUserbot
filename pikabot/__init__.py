@@ -14,8 +14,8 @@ if STRING_SESSION:
     bot = TelegramClient(StringSession(STRING_SESSION),APP_ID,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
      quit(1)
-if STR2:
-    client2 = TelegramClient(StringSession(STR2),APP_ID,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+client2 = TelegramClient(StringSession(STR2),APP_ID,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+
 if BOT_TOKEN:    
     tebot = TelegramClient("bot", APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
