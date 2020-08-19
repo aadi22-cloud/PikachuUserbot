@@ -9,8 +9,7 @@ else:
      quit(1)
 if Var.STR2:
     client2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
-else: 
-     quit(1)
+
 
 
 CMD_LIST = {}
