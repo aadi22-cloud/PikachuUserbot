@@ -1,5 +1,5 @@
 import os ; import sys ; from pymongo import MongoClient ; from telethon.sessions import StringSession ; from telethon import TelegramClient ; from telethon.tl.types import PeerChannel ; from var import Var ; import time ; UpTime = time.time()
-from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
+from logging import basicConfig, getLogger, INFO, DEBUG, WARNING ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
 from pySmartDL import SmartDL
 from requests import get
 
@@ -27,6 +27,10 @@ INT_PLUG = ""
 LOAD_PLUG = {}
 
 ENV = os.environ.get("ENV", False)
+
+basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=INFO)
+LOGS = getLogger(__name__)
 
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
