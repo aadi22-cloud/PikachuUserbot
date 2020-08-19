@@ -3,22 +3,19 @@ from logging import basicConfig, getLogger, INFO, DEBUG ; from distutils.util im
 from pySmartDL import SmartDL
 from requests import get
 
-os.system("pip install --upgrade pip")
-bot1 = None
+STR2 = os.environ.get("STR2", None)
+STRING_SESSION = os.environ.get("STRING_SESSION", None)
+BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 
-if Var.STRING_SESSION2:
-    sessionx = str(Var.STRING_SESSION2)
-    botx = TelegramClient(StringSession(sessionx), Var.APP_ID, Var.API_HASH)
+client2 = tebot = None
+if STRING_SESSION:
+    bot = TelegramClient(StringSession(STRING_SESSION),API_KEY,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
-    sessionxx = "Startup_Client1"
-    botx = TelegramClient(sessionxx, Var.APP_ID, Var.API_HASH)
-
-if Var.STRING_SESSION:
-    sessionnx = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(sessionnx), Var.APP_ID, Var.API_HASH)
-else:
-    sessionxy = "startup2"
-    bot = TelegramClient(sessionxy, Var.APP_ID, Var.API_HASH)
+     quit(1)
+if STR2:
+    client2 = TelegramClient(StringSession(STR2),API_KEY,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+if BOT_TOKEN:    
+    tebot = TelegramClient("bot", API_KEY, API_HASH).start(bot_token=BOT_TOKEN)
 
 
 CMD_LIST = {}
