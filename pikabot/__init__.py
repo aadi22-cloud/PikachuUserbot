@@ -6,16 +6,18 @@ from requests import get
 STR2 = os.environ.get("STR2", None)
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
+APP_ID = os.environ.get("APP_ID", None)
+API_HASH = os.environ.get("API_HASH", None)
 
 client2 = tebot = None
 if STRING_SESSION:
-    bot = TelegramClient(StringSession(STRING_SESSION),API_KEY,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+    bot = TelegramClient(StringSession(STRING_SESSION),APP_ID,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
      quit(1)
 if STR2:
-    client2 = TelegramClient(StringSession(STR2),API_KEY,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
+    client2 = TelegramClient(StringSession(STR2),APP_ID,API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 if BOT_TOKEN:    
-    tebot = TelegramClient("bot", API_KEY, API_HASH).start(bot_token=BOT_TOKEN)
+    tebot = TelegramClient("bot", APP_ID, API_HASH).start(bot_token=BOT_TOKEN)
 
 
 CMD_LIST = {}
