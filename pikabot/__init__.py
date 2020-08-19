@@ -6,19 +6,19 @@ from requests import get
 os.system("pip install --upgrade pip")
 bot1 = None
 
-if Var.STRING_SESSION:
-    session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
-
 if Var.STRING_SESSION2:
     session_name = str(Var.STRING_SESSION2)
     botx = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
-    session_name = "startup2"
+    session_name = "startup"
     botx = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+
+if Var.STRING_SESSION:
+    session_name = str(Var.STRING_SESSION)
+    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+else:
+    session_name = "startup2"
+    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
 
 CMD_LIST = {}
