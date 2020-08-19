@@ -3,7 +3,7 @@ from logging import basicConfig, getLogger, INFO, DEBUG, WARNING ; from distutil
 from pySmartDL import SmartDL
 from requests import get
 
-client2 = tebot = None
+client2 = None
 if STRING_SESSION:
     bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
