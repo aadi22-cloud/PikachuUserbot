@@ -19,7 +19,7 @@ else:
 
 async def a():
   LOGS.info("Connecting...") ; 
-  x = x2 = ""
+  x2 = ""
 if client2:
       try:
          await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
