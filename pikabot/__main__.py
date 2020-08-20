@@ -22,9 +22,9 @@ async def a():
   x = x2 = ""
 if client2:
       try:
-         await client2.connect() ; LOGS.info("client2 connected") ; x2 = ", Client2"
-  except:
-         LOGS.info("client2 Session string Wrong/Expired Please add new string session") ; quit(1)
+        await client2.start() ; LOGS.info("client2 connected") ; o2 = ", Client2"
+      except:
+         LOGS.info("client2 Session string Wrong/Expired Please add new string session or delete var S2") ; quit(1)
 async def start():
   cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
