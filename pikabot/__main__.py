@@ -16,6 +16,7 @@ else:
         print("Startup Completed")
     else:
         bot.start()
+        client2.start() 
 
 async def a():
   LOGS.info("Connecting...") ; 
@@ -43,9 +44,10 @@ import pikabot.carbonX
 print("Chal Gya hu bsdk Ab jaa k saved msgs me .help ya .alive type krke confirm kr le")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
+    client2.disconnect()
 else:
     bot.run_until_disconnected()
-
+    client2.run_until_disconnected()
 
 ItzSjDude.loop.run_until_complete(a())
 
