@@ -3,6 +3,17 @@ async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
+async def alt():
+    LOGS.info("Connecting to telegram servers...")
+    if client2:
+        try:
+            await client2.start()
+            LOGS.info("String 2 Connected")
+        except:
+            LOGS.info("String Session 2 expired. Please create new one")
+            quit(1)
+bot.loop.run_until_complete(alt())
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -17,14 +28,6 @@ else:
     else:
         bot.start()
 
-async def a():
-  LOGS.info("Connecting...") ; 
-  x2 = ""
-  if client2:
-      try:
-         await client2.start() ; LOGS.info("client2 connected") ; x2 = ", Client2"
-      except:
-        LOGS.info("client2 Session string Wrong/Expired Please add new string session or delete var S2") ; quit(1)
 async def start():
   cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
   for ixo in total_doxx:
@@ -45,6 +48,4 @@ if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.run_until_disconnected()
-
-ItzSjDude.loop.run_until_complete(a())
 
