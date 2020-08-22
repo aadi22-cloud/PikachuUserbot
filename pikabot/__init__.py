@@ -8,9 +8,11 @@ if Var.STRING_SESSION:
 else:
      quit(1)
 if Var.STR2:
-    client2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
-
-
+    bot2 = TelegramClient(StringSession(Var.STR2),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+if Var.STR3
+    bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+if Var.STR4
+    bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 
 CMD_LIST = {}
 # for later purposes
