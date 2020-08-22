@@ -21,8 +21,8 @@ if len(argv) not in (1, 3, 4):
 else:
     bot.tgbot2 = None
     if Var.TG_BOT2_USER_NAME is not None:
-       bot.tgbot2 = TelegramClient("TG_BOT_TOKEN2",api_id=Var.APP_ID,api_hash=Var.API_HASH).start(bottoken=Var.TG_BOT_USER_NAME)
-       bot.loop.run_until_complete(add_bot2(Var.TG_BOT_USER_NAME)
+        bot.tgbot2 = TelegramClient("TG_BOT_TOKEN2",api_id=Var.APP_ID,api_hash=Var.API_HASH).start(bottoken=Var.TG_BOT_USER_NAME)
+        bot.loop.run_until_complete(add_bot2(Var.TG_BOT_USER_NAME)
     else:
         bot.start()
 
