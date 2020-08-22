@@ -4,16 +4,33 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 async def alt():
-    LOGS.info("Connecting to telegram servers...")
-    if client2:
+    LOGS.info("Detecting nd Connecting to Sessions...")
+    if bot2:
         try:
-            await client2.start()
+            await bot2.start()
             LOGS.info("String 2 Connected")
         except:
             LOGS.info("String Session 2 expired. Please create new one")
             quit(1)
+    if bot3:
+        try:
+            await bot3.start()
+            LOGS.info("Session 3 Connected")
+        except:
+            LOGS.info("String Session 2 expired. Please create new one")
+            quit(1)
+    if bot4:
+        try:
+            await bot4.start()
+            LOGS.info("Session 4 Connected")
+        except:
+            LOGS.info("String Session 4 expired. Please create new one")
+            quit(1)
+  cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
+  for ixo in total_doxx:
+       mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
+       print("Loaded Sucessfully") 
 bot.loop.run_until_complete(alt())
-
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
@@ -27,13 +44,6 @@ else:
         print("Startup Completed")
     else:
         bot.start()
-
-async def start():
-  cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
-  for ixo in total_doxx:
-       mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
-       print("Loaded Sucessfully") 
-ItzSjDude.loop.run_until_complete(start())
 
 print("Initialising Core")
 
