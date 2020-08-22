@@ -57,6 +57,5 @@ RUN aria2c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64
 RUN git clone -b Beta https://github.com/ItzSjDude/PikachuUserbot /root/ItzSjDude
 RUN mkdir /root/ItzSjDude/bin/  && mkdir /root/ItzSjDude/plugins/ && mkdir root/ItzSjDude/pikabot/main_plugs/
 WORKDIR /root/ItzSjDude
-RUN chmod +x /usr/local/bin/*
 RUN pip3 install -r requirements.txt
 CMD ["python3","-m","pikabot"]
