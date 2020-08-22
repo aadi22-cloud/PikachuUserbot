@@ -27,10 +27,9 @@ async def alt():
         except:
             LOGS.info("String Session 4 expired. Please create new one")
             quit(1)
-  cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
-  for ixo in total_doxx:
+    cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
+    for ixo in total_doxx:
        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
-       print("Loaded Sucessfully") 
 bot.loop.run_until_complete(alt())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
