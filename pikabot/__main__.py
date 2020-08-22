@@ -4,6 +4,7 @@ async def add_bot(bot_token):
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
 async def alt():
+    await bot.start()
     LOGS.info("Detecting nd Connecting to Sessions...")
     if bot2:
         try:
