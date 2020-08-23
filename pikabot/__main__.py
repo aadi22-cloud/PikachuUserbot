@@ -39,7 +39,7 @@ async def alt():
             quit(1)
     if tgbot2:
         try:
-           await tgbot2.start() ; LOGS.info("Telegram Bot connected") ; o4 = ", TGBot"
+           await tgbot2.start() ; LOGS.info("Telegram Bot connected")
       except:
          LOGS.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
     
