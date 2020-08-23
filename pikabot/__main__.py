@@ -40,8 +40,8 @@ async def alt():
     if tgbot2:
         try:
            await tgbot2.start() ; LOGS.info("Telegram Bot connected")
-      except:
-         LOGS.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
+        except:
+           LOGS.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
     
     cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
