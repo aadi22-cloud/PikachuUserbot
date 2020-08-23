@@ -14,7 +14,7 @@ if Var.STR3:
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 if TG_BOT_TOKEN2:    
-    tgbot2 = TelegramClient("bot", Var.APP_KEY, Var.API_HASH).start(bot_token=TG_BOT_TOKEN2)
+    tgbot2 = TelegramClient("bot", Var.APP_KEY, Var.API_HASH).start(bot_token=Var.TG_BOT_TOKEN2)
 
 
 CMD_LIST = {}
