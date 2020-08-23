@@ -2,7 +2,7 @@ import os ; import sys ; from pymongo import MongoClient ; from telethon.session
 from logging import basicConfig, getLogger, INFO, DEBUG, WARNING ; from distutils.util import strtobool as sb ; import asyncio ; import pylast 
 from pySmartDL import SmartDL
 from requests import get
-bot2 = bot3 = bot4 = None
+bot2 = bot3 = bot4 = tgbot2 = None
 if Var.STRING_SESSION:    
     bot = TelegramClient(StringSession(Var.STRING_SESSION),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=False,lang_code='en')
 else:
@@ -13,6 +13,9 @@ if Var.STR3:
     bot3 = TelegramClient(StringSession(Var.STR3),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
 if Var.STR4:
     bot4 = TelegramClient(StringSession(Var.STR4),Var.APP_ID,Var.API_HASH,connection_retries=None,auto_reconnect=True,lang_code='en')
+if TG_BOT_TOKEN2:    
+    tgbot2 = TelegramClient("bot", Var.APP_KEY, Var.API_HASH).start(bot_token=TG_BOT_TOKEN2)
+
 
 CMD_LIST = {}
 # for later purposes
