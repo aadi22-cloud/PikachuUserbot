@@ -1,11 +1,8 @@
 import os, telethon, telethon.utils, asyncio, traceback ; from pikabot import * ; from sys import * ; from var import * ; client = bot ; ItzSjDude = client ; from telethon.errors.rpcerrorlist import * ; from var import Client as clIent ; from pathlib import Path ; from telethon import * ; from telethon.tl.types import * 
 async def add_bot(bot_token):
     await bot.start(bot_token)
-    await bot2.start(bot_token)
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
-    bot2.me = await bot2.get_me() 
-    bot2.uid = telethon.utils.get_peer_id(bot2.me)
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
