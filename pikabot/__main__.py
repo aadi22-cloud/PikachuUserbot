@@ -37,12 +37,7 @@ async def alt():
         except:
             LOGS.info("String Session 4 expired. Please create new one")
             quit(1)
-    if tgbot2:
-        try:
-           await tgbot2.start() ; LOGS.info("Telegram Bot connected")
-        except:
-           LOGS.info("Bot Token Wrong/ Expired please add new one  or delete var BOT_TOKEN ") ; quit(1)
-    
+  
     cli1 = await client.get_messages(clIent, None , filter=InputMessagesFilterDocument) ; total = int(cli1.total) ; total_doxx = range(0, total)
     for ixo in total_doxx:
        mxo =cli1[ixo].id ; await client.download_media(await bot.get_messages(clIent, ids=mxo), "pikabot/main_plugs")
