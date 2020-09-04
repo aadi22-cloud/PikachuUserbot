@@ -5,8 +5,7 @@ async def add_bot(bot_token):
     bot.uid = telethon.utils.get_peer_id(bot.me)
     bot.axi = await bot2.get_me()
     bot.bxi = telethon.utils.get_peer_id(bot.axi)
-      except:
-          pass
+
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
