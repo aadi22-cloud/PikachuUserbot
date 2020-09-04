@@ -46,7 +46,7 @@ class GMute2(BASE):
         self.sender = str(sender)
 
 
-GMute.__table__.create(checkfirst=True)
+GMute2.__table__.create(checkfirst=True)
 
 
 def is_gmuted2(sender_id):
