@@ -37,3 +37,35 @@ def ungmute(sender):
     if rem:
         SESSION.delete(rem)
         SESSION.commit()
+
+class GMute2(BASE):
+    __tablename__ = "gmute2"
+    sender = Column(String(14), primary_key=True)
+
+    def __init__(self, sender):
+        self.sender = str(sender)
+
+
+GMute.__table__.create(checkfirst=True)
+
+
+def is_gmuted2(sender_id):
+    try:
+        return SESSION.query(GMute2).all()
+    except:
+        return None
+    finally:
+        SESSION.close()
+
+
+def gmute2(sender):
+    adder = GMute2(str(sender))
+    SESSION.add(adder)
+    SESSION.commit()
+
+
+def ungmute2(sender):
+    rem = SESSION.query(GMute2).get((str(sender)))
+    if rem:
+        SESSION.delete(rem)
+        SESSION.commit()
