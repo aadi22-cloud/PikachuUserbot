@@ -3,10 +3,8 @@ async def add_bot(bot_token):
     await bot.start(bot_token)
     bot.me = await bot.get_me() 
     bot.uid = telethon.utils.get_peer_id(bot.me)
-    if bot2 is not None:
-      try:
-         axi = await bot2.get_me()
-         bxi = telethon.utils.get_peer_id(axi)
+    bot.axi = await bot2.get_me()
+    bot.bxi = telethon.utils.get_peer_id(bot.axi)
       except:
           pass
 if len(argv) not in (1, 3, 4):
