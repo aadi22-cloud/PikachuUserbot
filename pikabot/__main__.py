@@ -54,7 +54,7 @@ import pikabot._core
 print("setting up carbon") 
 
 import pikabot.carbonX   
-from userbot.utils import load_module
+from pikabot.utils import load_module
 import glob
 path = 'plugins/*.py'
 files = glob.glob(path)
