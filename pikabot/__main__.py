@@ -55,6 +55,16 @@ print("setting up carbon")
 
 import pikabot.carbonX   
 
+import glob
+path = 'plugins/*.py'
+files = glob.glob(path)
+for name in files:
+    with open(name) as f:
+        path1 = Path(f.name)
+        shortname = path1.stem
+        load_module(shortname.replace(".py", ""))
+
+
 print("Chal Gya hu bsdk Ab jaa k saved msgs me .help ya .alive type krke confirm kr le")
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
