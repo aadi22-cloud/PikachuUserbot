@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
+RUN echo -e "\nexport TERM=xterm" >> ~/.bashrc
 RUN apt-get update && apt upgrade -y
 
 RUN apt-get install -y\
