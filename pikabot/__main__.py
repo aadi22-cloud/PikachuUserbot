@@ -28,7 +28,7 @@ async def evnt_handler(event):
     else:
        print("hello world")
 
-bot.loop.run_until_complete(evnt_handler())
+bot.loop.run_forever(evnt_handler(event))
         
 
 
