@@ -17,6 +17,23 @@ else:
     else:
         bot.start()
 
+
+async def evnt_handler():
+    import os
+    AS = os.environ.get("ALIVE_NAME", "").split("|")
+    if event.sender_id == bot.uid:
+      return AS[0]
+    if event.sender_id == bot.bxi:
+      return AS[1]
+    else:
+       print("hello world")
+
+bot.loop.run_until_complete(evnt_handler())
+        
+
+
+
+
 async def alt():
     await bot.start()
     LOGS.info("Detecting nd Connecting to Sessions...")
