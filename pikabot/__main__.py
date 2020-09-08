@@ -17,8 +17,8 @@ else:
     else:
         bot.start()
 
-
-async def evnt_handler():
+from telethon import events
+async def evnt_handler(event):
     import os
     AS = os.environ.get("ALIVE_NAME", "").split("|")
     if event.sender_id == bot.uid:
@@ -28,7 +28,7 @@ async def evnt_handler():
     else:
        print("hello world")
 
-bot.loop.run_until_complete(evnt_handler())
+bot.loop.run_until_complete(evnt_handler(event))
         
 
 
