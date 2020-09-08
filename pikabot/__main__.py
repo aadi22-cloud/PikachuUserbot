@@ -28,11 +28,7 @@ async def evnt_handler(event):
     else:
        print("hello world")
 
-bot.loop.run_forever(evnt_handler(event))
         
-
-
-
 
 async def alt():
     await bot.start()
