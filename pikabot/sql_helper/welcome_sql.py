@@ -1,3 +1,10 @@
+# © 2020 PikaBot
+#
+# You may not use this file without proper authorship and consent from @ItzSjDudeSupport
+#
+# Made by @ItzSjDude for Pikabot
+
+
 from sqlalchemy import BigInteger, Boolean, Column, String, UnicodeText
 from pikabot.sql_helper import SESSION, BASE
 
